@@ -8,7 +8,7 @@
         "uncompress" : true
     },
     "uploader" : {
-        "parser" : "parser:load_annotations",
+        "parser" : "parser:load_ACMG",
         "on_duplicates" : "error"
     }
 }
