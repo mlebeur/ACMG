@@ -12,6 +12,7 @@ def load_ACMG(data_folder):
         _id = rec["ensembl_gene_id"]
         process_key = lambda k: k.replace(" ","_").lower()
         rec = dict_convert(rec,keyfn=process_key)
+        rec = dict_sweep(rec,vals=[np.nan])
         results.setdefault(_id,[]).append(rec)
     for _id,docs in results.items():
         doc = {"_id": _id, "ACMG" : docs}
